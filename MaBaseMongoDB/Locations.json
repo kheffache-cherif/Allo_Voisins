@@ -1,0 +1,29 @@
+[
+    {"idLocation":"Emile",
+        "email":"emile.zola@mailserver.fr",
+            "idBien":"A-1",
+                "Date":"emile.zola@mailserver.fr"
+    },
+
+    {"idLocation":"Emile",
+        "email":"emile.zola@mailserver.fr",
+            "idBien":"Zola",
+                "Date":"emile.zola@mailserver.fr"
+    },
+
+    {"idLocation":"Emile",
+        "email":"emile.zola@mailserver.fr",
+            "idBien":"Zola",
+                "Date":"emile.zola@mailserver.fr"
+    },
+    {"idLocation":"Emile",
+        "email":"emile.zola@mailserver.fr",
+            "idBien":"Zola",
+                "Date":"emile.zola@mailserver.fr"
+    },
+    {"idLocation":"Emile",
+        "email":"emile.zola@mailserver.fr",
+            "idBien":"Zola",
+                "Date":"emile.zola@mailserver.fr"
+    }
+]
