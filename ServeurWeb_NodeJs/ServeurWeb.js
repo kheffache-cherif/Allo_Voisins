@@ -25,7 +25,7 @@ const url         = "mongodb://localhost:27017";
 MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
 	let db = client.db("SUPERVENTES"); // declaration de la bd
 
-
+/*
 	// Liste des produits
 app.get("/produits", (req,res) => {
 	console.log("/produits");
@@ -73,30 +73,30 @@ app.post("/produit" ,(req,res)=>{
 });  
 
 
-
+*/
 // Liste des membres
-app.get("/membres", (req,res) => {
-	console.log("/membres");
+app.get("/Membres", (req,res) => {
+	console.log("/Membres");
 	try{
-		db.collection("membres").find().toArray((err, documents) => { 
+		db.collection("Membres").find().toArray((err, documents) => { 
 			res.end(JSON.stringify(documents));  // revois le resultat.
 		});
 	} 
 	catch(e)  {
 		
     
-		console.log("Erreur sur /membres : " + e);
+		console.log("Erreur sur /Membres : " + e);
 		res.end(JSON.stringify([]));
 	}
 });
 
 // authentification:-
-app.post("/membres/authentification", (req,res) => {
-	// information sur le lien de connextion "membre"
+app.post("/Membres/connexion", (req,res) => {
+	// information sur le lien de connexion "membre"
 	console.log(" Tentative d'authentification pour le membre " +JSON.stringify(req.body));  
 	try{
 		//() chercher au niveau de db et renvoyer un doccument.json
-		db.collection("membres").find(req.body).toArray((err, documents) => {   
+		db.collection("Membres").find(req.body).toArray((err, documents) => {   
 			if (documents.length == 1){
 				res.end(JSON.stringify({"resultat":1, "message":"authentification réussie" })); // si membre exixtant
 			}else{
@@ -104,7 +104,7 @@ app.post("/membres/authentification", (req,res) => {
 			}
 		});
 	} catch(e)  {
-		console.log("Erreur sur /membres : " + e);
+		console.log("Erreur sur /Membres : " + e);
 		res.end(JSON.stringify([]));
 	}
 });
@@ -115,10 +115,13 @@ app.post("/inscription", (req, res) => { // reception de donnes service post ang
 
 	console.log(req.body.nom);   // body c'est le corps de la requette qui contient les donnees renvoyer de angular inscrip.ts
 try {
-	db.collection("membres").insertOne({ "nom": req.body.nom,      // insert dans mongo les donnes recuperer avec la requette
+	db.collection("Membres").insertOne({ "nom": req.body.nom,      // insert dans mongo les donnes recuperer avec la requette
 										  "prenom": req.body.prenom, 
 										  "email": req.body.email, 
-										  "password": req.body.password });
+										  "password": req.body.password, 
+										  "ville": req.body.password,
+										  "adresse": req.body.password,
+										  "téléphone": req.body.password  });
    
 	console.log("Nouveau utilisateur ajouter avec succes");
 	res.end("Ajouter");  // le message revoyer pas les donnees
@@ -128,7 +131,7 @@ catch (e) {
 }
 
 });  
-
+/*
 
  // Liste des categories
 
@@ -156,7 +159,7 @@ catch (e) {
 });
 
 
-/* service d'ajout au panier*/
+/* service d'ajout au panier
 
 app.post("/ajoutpanier", (req, res) => { // reception de donnes service post angular vers node
 	console.log(" panier creer");
@@ -191,7 +194,7 @@ app.get("/getPanier/:email", (req,res) => { // methode qui prends comme parametr
 	}
 });
 
-
+*/
 
 
 
