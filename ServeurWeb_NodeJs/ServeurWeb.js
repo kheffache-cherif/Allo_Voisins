@@ -23,7 +23,7 @@ const url         = "mongodb://localhost:27017";
 
 
 MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
-	let db = client.db("SUPERVENTES"); // declaration de la bd
+	let db = client.db("SOLIDARITES"); // declaration de la bd
 
 /*
 	// Liste des produits
@@ -91,7 +91,7 @@ app.get("/Membres", (req,res) => {
 });
 
 // authentification:-
-app.post("/Membres/connexion", (req,res) => {
+app.post("/Membres/Connexion", (req,res) => {
 	// information sur le lien de connexion "membre"
 	console.log(" Tentative d'authentification pour le membre " +JSON.stringify(req.body));  
 	try{
@@ -110,7 +110,7 @@ app.post("/Membres/connexion", (req,res) => {
 });
 
 // connexion d'utilisateurs
-app.post("/inscription", (req, res) => { // reception de donnes service post angular vers node
+app.post("/Inscription", (req, res) => { // reception de donnes service post angular vers node
 	console.log(" utilisateur ajouter");
 
 	console.log(req.body.nom);   // body c'est le corps de la requette qui contient les donnees renvoyer de angular inscrip.ts
@@ -121,7 +121,7 @@ try {
 										  "password": req.body.password, 
 										  "ville": req.body.password,
 										  "adresse": req.body.password,
-										  "téléphone": req.body.password  });
+										  "telephone": req.body.password  });
    
 	console.log("Nouveau utilisateur ajouter avec succes");
 	res.end("Ajouter");  // le message revoyer pas les donnees

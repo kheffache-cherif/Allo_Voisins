@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NgForm } from '@angular/forms';
@@ -9,6 +9,9 @@ import { NgForm } from '@angular/forms';
   templateUrl: './inscription.component.html',
   styleUrls: ['./inscription.component.css']
 })
+
+
+
 export class InscriptionComponent implements OnInit {
   httpOpt = {
     headers: new HttpHeaders({

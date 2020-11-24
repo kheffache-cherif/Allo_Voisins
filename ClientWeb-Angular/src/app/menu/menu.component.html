@@ -1,0 +1,41 @@
+
+ <div class ="color">
+
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top navbar-expand">
+
+    <div class="container-fluid">
+      <ul *ngIf="!(user|async)" class="navbar-nav"> <!--Utilisateur non connecté-->
+
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/inscription">Inscription</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/connexion">Connexion</a>
+      </li>
+
+
+
+      <ul *ngIf="user|async" class="navbar-nav"> <!--Utilisateur connecté-->
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="acceuil"> Acceuil </a>
+        </li>
+
+        <li class="nav-item">
+          <button><a class="nav-link active" (click)="deconnexion()"><p style="color:red;">Déconnexion de {{user|async}}</p></a></button>
+           <div *ngIf="user|async" class="nav-item  navbar-right">
+
+          </div>
+        </li>
+      </ul>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">chercher</button>
+    </form>
+
+  </div>
+</nav>
+

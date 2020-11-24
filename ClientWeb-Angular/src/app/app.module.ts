@@ -11,6 +11,8 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { AppComponent } from './app.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { CreationBienComponent } from './creation-bien/creation-bien.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { CreationBienComponent } from './creation-bien/creation-bien.component';
     AppComponent,
     ConnexionComponent,
     InscriptionComponent,
-    CreationBienComponent
+    CreationBienComponent,
+    AcceuilComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
