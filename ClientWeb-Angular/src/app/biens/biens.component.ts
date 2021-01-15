@@ -36,6 +36,6 @@ export class BiensComponent implements OnInit {
     this.biensService.getBiens().subscribe((biens) => {
       this.biens = biens;
     });
-    console.log('dans ngOnInit() du composant produits');
+    console.log('dans ngOnInit() du composant biens');
   }
 }

@@ -28,7 +28,7 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
   app.get("/biens", (req, res) => {
     console.log("/biens");
     try {
-      db.collection("biens")
+      db.collection("Biens")
         .find()
         .toArray((err, documents) => {
           res.end(JSON.stringify(documents)); // revois le resultat.
@@ -40,23 +40,6 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
   });
 
   /*
-// liste des peroduits par categorie:
-
-app.get("/produits/:categorie", (req,res) => {
-	let categorie = req.params.categorie; // recupération du parametre de la route
-	console.log("/produits/:categorie "+categorie); // le + pour afficher le lien avec la categorie
-	try{
-		// je selectione tout les produits de type categorie    {type:categorie})
-		db.collection("produits").find({type:categorie}).toArray((err, documents) => {   
-			res.end(JSON.stringify(documents)); 
-		});
-	} catch(e)  {
-		console.log("Erreur sur /produits : " + e);
-		res.end(JSON.stringify([]));
-	}
-});
-
-
 // ajout d'élements à la base de données
 
 app.post("/produit" ,(req,res)=>{
