@@ -1,0 +1,68 @@
+<h1>Veuillez remplire le formulaire d'ajout de bien si-dessous:</h1>
+
+<form [formGroup]="ajoutForm" (ngSubmit)="onSubmit()" class="was-validated">
+  <div class="row justify-content-center">
+    <div class="col">
+      <label for="nom">Nom</label>
+      <input
+        type="text"
+        id="nom"
+        name="nom"
+        class="form-control"
+        placeholder="nom.."
+        formControlName="nom"
+        required
+      />
+      <!--le for et id sert à relier notre id à inputS   ngmodel est une directive structurelle
+          [()] liaison à double sens   attribut directive
+        -->
+    </div>
+
+    <div class="col">
+      <label for="descriptif">descriptif</label>
+      <input
+        type="text"
+        id="descriptif"
+        name="descriptif"
+        class="form-control"
+        placeholder="descriptif.."
+        formControlName="descriptif"
+        required
+      />
+    </div>
+  </div>
+
+  <label for="lienPhoto">lienPhoto</label>
+  <input
+    type="text"
+    id="lienPhoto"
+    name="lienPhoto"
+    class="form-control"
+    placeholder="Votre lienPhoto.."
+    formControlName="lienPhoto"
+    required
+  />
+
+  <label for="prixNeuf">Prix Neuf </label><br />
+  <input
+    type="number"
+    id="prixNeuf"
+    name="prixNeuf"
+    class="form-control"
+    placeholder="Prix Neuf.."
+    formControlName="prixNeuf"
+    required
+  />
+  <label for="motClef">mot Clef</label>
+  <input
+    type="text"
+    id="motClef"
+    name="motClef"
+    class="form-control"
+    placeholder="mot Clef.."
+    formControlName="motClef"
+    required
+  />
+
+  <input type="submit" value="Ajout Bien" />
+</form>

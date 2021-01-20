@@ -15,4 +15,10 @@ export class BiensService {
     console.log('dans le service ProduitService avec' + url);
     return this.http.get(url);
   }
+
+  ajoutBiens(bien): Observable<any> {
+    let url = this.urlBase + '/bien';
+    console.log('dans le service BienService avec' + url + bien);  //bien
+    return this.http.post(url, bien);
+  }
 }

@@ -39,22 +39,37 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
     }
   });
 
-  /*
-// ajout d'élements à la base de données
+  // ajout d'élements à la base de données
 
-app.post("/produit" ,(req,res)=>{
-	console.log("route:/produit/ajout avec" +JSON.stringify(req.body));
-	try{
-		db.collection("produits").insertOne(req.body);
-		res.end(JSON.stringify({"message":"ajout de produit effectué avec succès"}));
-	} catch(e){
-		res.end(JSON.stringify({"message":"probleme sur l'ajout du produit :" +e}));
-	}
+  app.post("/bien", (req, res) => {
+    console.log("route:/bien/ajout avec" + JSON.stringify(req.body));
+    try {
+      var idNewBien;
 
-});  
+      db.collection("Biens").insertOne(
+        req.body,
+        function (err, doccumentIncerted) {
+          // fonction calback
+          //  idNewBien = doccumentIncerted._id; //recuperer  identifiant
+          console.log(doccumentIncerted._id);
+        }
+      );
+      db.collection("DescriptifBiens").insertOne({
+        idBien: req.body._id,
+        motClef: req.body.motClef,
+      });
 
+      console.log(req.body);
+      res.end(
+        JSON.stringify({ message: "ajout de bien effectué avec succès" })
+      );
+    } catch (e) {
+      res.end(
+        JSON.stringify({ message: "probleme sur l'ajout du bien :" + e })
+      );
+    }
+  });
 
-*/
   // Liste des membres
   app.get("/membres", (req, res) => {
     console.log("/Membres");
