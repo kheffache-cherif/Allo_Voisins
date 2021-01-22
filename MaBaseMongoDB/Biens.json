@@ -1,37 +1,38 @@
 [
   {
-    "idBien": "Politique",
+    "idBien": "51",
     "nom": "Les Citations du Président Mao Tse-Toung",
-    "descriptif": "17",
+    "descriptif": "Politique",
     "image": "assets/images/lecture-avenire.jpg",
-    "prixNeuf": "hgfg"
+    "prixNeuf": "55"
   },
   {
-    "idBien": "Politique",
-    "nom": "Les Citations du Président Mao Tse-Toung",
-    "descriptif": "17",
-    "image": "assets/images/lecture-avenire.jpg",
-    "prixNeuf": "2552"
+    "idBien": "15",
+    "nom": "Scanner Thoracique",
+    "descriptif": "Medecine",
+    "image" :"assets/images/Scanner Thoracique.jpeg",
+    "prixNeuf": "25"
   },
   {
-    "idBien": "Politique",
-    "nom": "Les Citations du Président Mao Tse-Toung",
-    "descriptif": "17",
-    "image": "assets/images/lecture-avenire.jpg",
+    "idBien": "45",
+    "nom": " L’Alchimiste ",
+    "descriptif": "Phylosophie",
+    "image": "assets/images/L’Alchimiste.jpg",
     "prixNeuf": "522"
   },
   {
-    "idBien": "Politique",
-    "nom": "Les Citations du Président Mao Tse-Toung",
-    "descriptif": "17",
-    "image": "assets/images/lecture-avenire.jpg",
+    "idBien": "212",
+    "nom": "La Nuit des temps",
+    "descriptif": "Science-Fiction",
+    "image": "assets/images/La Nuit des temps.jpg",
     "prixNeuf": "655"
   },
   {
-    "idBien": "Politique",
-    "nom": "Les Citations du Président Mao Tse-Toung",
-    "descriptif": "17",
-    "image": "assets/images/lecture-avenire.jpg",
+    "idBien": "12",
+    "nom": "Les cavaliers",
+    "descriptif": "Aventure",
+    "image" :"assets/images/Les cavaliers.jpg",
     "prixNeuf": "544"
   }
+  
 ]

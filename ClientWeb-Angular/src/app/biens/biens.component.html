@@ -1,23 +1,19 @@
-<div class="text">
-  <h1 class="titreListeBiens">Liste des biens</h1>
+<h1 class="titreListeBiens">Liste des biens</h1>
 
-  <ol>
-    <li *ngFor="let bien of biens">
-      <div class="row">
-        <div class="col-6 align-self-center">
-          <p class="titreLivre">
-            {{ bien["idBien"] }}--({{ bien["nom"] }})--({{
-              bien["descriptif"]
-            }}) prix:{{ bien["prixNeuf"] }}
-            Euros
-          </p>
-        </div>
-
-        <div class="col-6 justify-content-center">
-          <img [src]="bien.image" height="100" width="100" background />
-        </div>
+<div class="card-deck mb-3 text-center">
+  <div *ngFor="let bien of biens" class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">
+        {{ bien["idBien"] }} / ({{ bien["nom"] }}) / ({{ bien["descriptif"] }})
+      </h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">
+        {{ bien["prixNeuf"] }} <small class="text-muted">€</small>
+      </h1>
+      <div class="list-unstyled mt-3 mb-4">
+        <img [src]="bien.image" height="150" width="150" background />
       </div>
-      <!--<p>{{ bien["_id"] }}</p>-->
 
       <div class="row justify-content-center margin-buffer">
         <button
@@ -28,6 +24,6 @@
           Emprunter
         </button>
       </div>
-    </li>
-  </ol>
+    </div>
+  </div>
 </div>
