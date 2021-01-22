@@ -1,43 +1,94 @@
-
-<h1>Veuillez saisir vos données personnelles si-dessous:</h1>
-
-<form (ngSubmit)="onSubmit(inscriptionForm)" #inscriptionForm="ngForm" class="was-validated">
+<h2 class="page-header">Inscription</h2>
+<form
+  (ngSubmit)="onSubmit(inscriptionForm)"
+  #inscriptionForm="ngForm"
+  class="was-validated"
+>
   <div class="row justify-content-center">
     <div class="col">
       <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" class="form-control" placeholder="nom.."[(ngModel)]="utilisateur.nom" required>
-        <!--le for et id sert à relier notre id à inputS   ngmodel est une directive structurelle
+      <input
+        type="text"
+        id="nom"
+        name="nom"
+        class="form-control"
+        placeholder="nom.."
+        [(ngModel)]="utilisateur.nom"
+        required
+      />
+      <!--le for et id sert à relier notre id à inputS   ngmodel est une directive structurelle
           [()] liaison à double sens   attribut directive
         -->
     </div>
 
     <div class="col">
       <label for="prenom">Prenom</label>
-      <input type="text" id="prenom" name="prenom" class="form-control" placeholder="prenom.." [(ngModel)]="utilisateur.prenom" required>
+      <input
+        type="text"
+        id="prenom"
+        name="prenom"
+        class="form-control"
+        placeholder="prenom.."
+        [(ngModel)]="utilisateur.prenom"
+        required
+      />
     </div>
   </div>
 
-      <label for="email">Email</label>
-        <input type="text" id="email" name="email" class="form-control" placeholder="Votre email.." [(ngModel)]="utilisateur.email" required>
+  <label for="email">Email</label>
+  <input
+    type="text"
+    id="email"
+    name="email"
+    class="form-control"
+    placeholder="Votre email.."
+    [(ngModel)]="utilisateur.email"
+    required
+  />
 
-        <label for="mdp">Mot de Passe</label><br>
-        <input type="password" id="mdp" name="mdp" class="form-control" placeholder="Mot de passe.." [(ngModel)]="utilisateur.password" required>
+  <label for="mdp">Mot de Passe</label><br />
+  <input
+    type="password"
+    id="mdp"
+    name="mdp"
+    class="form-control"
+    placeholder="Mot de passe.."
+    [(ngModel)]="utilisateur.password"
+    required
+  />
 
+  <label for="ville">Ville</label>
+  <input
+    type="text"
+    id="ville"
+    name="ville"
+    class="form-control"
+    placeholder="ville.."
+    [(ngModel)]="utilisateur.ville"
+    required
+  />
 
+  <label for="adresse">Adresse</label><br />
+  <input
+    type="adresse"
+    id="adresse"
+    name="adresse"
+    class="form-control"
+    placeholder="Adresse.."
+    [(ngModel)]="utilisateur.adresse"
+    required
+  />
 
-        <label for="ville">Ville</label>
-        <input type="text" id="ville" name="ville" class="form-control" placeholder="ville.." [(ngModel)]="utilisateur.ville" required>
+  <label for="telephone">Telephone</label><br />
+  <input
+    type="telephone"
+    id="telephone"
+    name="telephone"
+    class="form-control"
+    placeholder="telephone."
+    [(ngModel)]="utilisateur.telephone"
+    required
+  />
 
-      <label for="adresse">Adresse</label><br>
-        <input type="adresse" id="adresse" name="adresse" class="form-control" placeholder="Adresse.." [(ngModel)]="utilisateur.adresse" required>
-
-        <label for="telephone">Telephone</label><br>
-        <input type="telephone" id="telephone" name="telephone" class="form-control" placeholder="telephone." [(ngModel)]="utilisateur.telephone" required>
-
-
-
-        <input type="submit" value="Validez">
-
-
-  </form>
-
+  <input type="submit" class="btn btn-primary" value="Inscription" />
+</form>

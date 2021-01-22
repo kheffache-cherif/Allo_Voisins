@@ -5,6 +5,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { BiensComponent } from './biens/biens.component';
 import { AjoutBienComponent } from './ajout-bien/ajout-bien.component';
+import { EmpruntComponent } from './emprunt/emprunt.component';
 
 const routes: Routes = [
   { path: 'acceuil', component: AcceuilComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'ajout-bien', component: AjoutBienComponent },
+  { path: 'emprunt', component: EmpruntComponent },
 ];
 
 @NgModule({

@@ -4,6 +4,7 @@ import { from, Observable } from 'rxjs'; // un observable qui sert à modifier t
 import { ConnexionService } from '../connexion.service';
 import { BiensService } from '../biens.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { EmpruntService } from '../emprunt.service';
 @Component({
   selector: 'app-biens',
   templateUrl: './biens.component.html',
@@ -26,6 +27,7 @@ export class BiensComponent implements OnInit {
 
   constructor(
     private biensService: BiensService,
+    private empruntService: EmpruntService,
     private connexionService: ConnexionService,
     private route: ActivatedRoute
   ) {
@@ -37,5 +39,18 @@ export class BiensComponent implements OnInit {
       this.biens = biens;
     });
     console.log('dans ngOnInit() du composant biens');
+  }
+  ajouterEmprunt(idBien) {
+    let emprunt = {}; // creation de l'objet bien à inserer dans la collection location de BD
+    this.user.subscribe((userConnected) => {
+      //console.log(
+      //  'emprunt du bien' + idBien + "pour l'utilisateur" + userConnected
+      //);
+      emprunt['idBien'] = idBien;
+      emprunt['emailUtilisateur'] = userConnected; // remplissage de ces shamps.
+      console.log(emprunt);
+
+      this.empruntService.ajouterEmprunt(emprunt); // l'appel de la methode du service pour joindere le service de node de l'ajout
+    });
   }
 }

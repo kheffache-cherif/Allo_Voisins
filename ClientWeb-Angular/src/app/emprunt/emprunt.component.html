@@ -1,0 +1,6 @@
+<ol>
+  <li *ngFor="let bien of biens">
+    <p>{{ bien["idBien"]["nom"] }}</p>
+    <button (click)= 'supprimerEmprunt(bien)' class="btn btn-primary">Rendre le Bien</button>
+  </li>
+</ol>

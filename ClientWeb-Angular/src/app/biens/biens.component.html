@@ -17,7 +17,17 @@
           <img [src]="bien.image" height="100" width="100" background />
         </div>
       </div>
-                    <!--<p>{{ bien["_id"] }}</p>-->
+      <!--<p>{{ bien["_id"] }}</p>-->
+
+      <div class="row justify-content-center margin-buffer">
+        <button
+          *ngIf="user | async"
+          class="btn btn-dark"
+          (click)="ajouterEmprunt(bien)"
+        >
+          Emprunter
+        </button>
+      </div>
     </li>
   </ol>
 </div>

@@ -1,17 +1,27 @@
+<form (ngSubmit)="onSubmit()" #inscriptionForm="ngForm">
+  <div class="form-group">
+    <label>Email</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      [(ngModel)]="utilisateur['email']"
+      name="email"
+    />
+  </div>
+  <div class="form-group">
+    <label>Mot de passe</label>
+    <input
+      type="password"
+      class="form-control"
+      required
+      [(ngModel)]="utilisateur['password']"
+      name="password"
+    />
+  </div>
 
-    <div class="auth-page">
+  <input type="submit" class="btn btn-primary" value="se connecter" />
+</form>
+<p>Non inscris, <a routerLink="/inscription">inscrivez vous</a></p>
 
-      <div class="well">
-        <form (ngSubmit)="onSubmit()" #inscriptionForm="ngForm">
-          <label><strong>Email</strong></label>
-            <input type="text" class="form-control" required [(ngModel)]="utilisateur['email']" name="email" /> <!--construction de l'oblet JSON UTILISATEUR-->
-
-         <label><strong>Mot de passe </strong></label>
-          <input type="password" class="form-control" required [(ngModel)]="utilisateur['password']" name="password" />
-
-          <input type="submit" value="Se connecter"/>
-        </form>
-        <p> {{message}} </p>
-
-       </div>
-   </div>
+<p style="text-align: center">{{ message }}</p>

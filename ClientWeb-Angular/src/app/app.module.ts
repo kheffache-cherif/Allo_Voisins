@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { BiensComponent } from './biens/biens.component';
 import { BiensService } from './biens.service';
 import { AjoutBienComponent } from './ajout-bien/ajout-bien.component';
+import { EmpruntComponent } from './emprunt/emprunt.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AjoutBienComponent } from './ajout-bien/ajout-bien.component';
     AcceuilComponent,
     MenuComponent,
     AjoutBienComponent,
+    EmpruntComponent,
   ],
   imports: [
     CommonModule,
